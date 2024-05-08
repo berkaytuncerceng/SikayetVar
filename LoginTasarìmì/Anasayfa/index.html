@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="anasayfaStyle.css">
+    <link href="https://fonts.googleapis.com/css?
+    family=Dosis&display=swap"rel="stylesheet" >
+</head>
+<body>
+    <div class="hero">
+        <div class="navbar">
+            <div class="logo">
+                <video src="logodeneme1.mp4" autoplay muted></video>
+              </div>
+            <!-- <img src="https://cdn.sikayetvar.com/public/images/logo.svg" decoding="auto" alt="Şikayetvar" width="181" height="30" class="logo"> -->
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="PopülerSikayetler/index.html">Popüler Şikayetler</a></li>
+                <li><a href="şikayetler/tumSikayetler.html">Şikayetler</a></li>
+                <li><a href="ŞikayetYaz/şikayetYaz.html">Şikayet Yaz</a></li>
+            </ul>
+            <div class="action">
+                <div class="profile" onclick="menuToggle();">
+                    <img src="bunucikart.png" alt="">
+                </div>
+                <div class="menu">
+                    <h3>Berkay Tuncer</h3>
+                    <ul>
+                        <li><img src="user.png">Profilim</li>
+                        <li><img src="chat_FILL0_wght400_GRAD0_opsz48.png">Şikayetlerim</li>
+                        <li> <img src="edit_FILL0_wght400_GRAD0_opsz48.png"> Şikayet Yaz</li>
+                        <li> <img src="logout_FILL0_wght400_GRAD0_opsz48.png"> Çıkış Yap</li>
+                    </ul>
+                </div>
+            </div>
+            <script>
+                function menuToggle(){
+                    const toggleMenu=document.querySelector('.menu');
+                    toggleMenu.classList.toggle('active')
+                }
+            </script>
+            <script>
+                document.querySelector('.menu li:nth-child(1)').addEventListener("click", function(event) {
+                window.location.href = "firma_profili/index.html";
+                });
+            </script>
+            <script>
+              document.querySelector('.menu li:nth-child(2)').addEventListener("click", function(event) {
+              window.location.href = "şikayetListeleme/index.html";
+               });
+                        </script>
+            <script>
+                document.querySelector('.menu li:nth-child(3)').addEventListener("click", function(event) {
+                  window.location.href = "ŞikayetYaz/şikayetYaz.html";
+                });
+              </script>
+              <script>
+            document.querySelector('.menu li:nth-child(3)').addEventListener("click", function(event) {
+            window.location.href = "ŞikayetYaz/şikayetYaz.html";
+             });
+            </script>
+            <script>
+                document.querySelector('.menu li:last-child').addEventListener('click', function() {
+                  window.location.href ='../index2.html';
+                });
+              </script>
+
+        </div>
+        <div class="banner">
+            <div class="left-column">
+                <h1> <strong>Çözüm için</strong></h1><br><h3>Şikayetvar</h3>  
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br> Sed natus commodi ipsam magnam ex porro repellendus perferendis, possimus deleniti, quas repudiandae rem?
+                     Veritatis dolores dolorum repellat tempora quas illo modi.
+                </p> 
+                <div class="btn">
+                    <button type="button" class="primary-btn" id="keşfetButonu">Keşfet</button>
+                    <button type="button" id="şikayetYazButonu">Şikayet Yaz</button>
+                </div>
+            </div>
+            <div class="right-column">
+                <img src="Ekran görüntüsü 2022-12-20 122106.png" alt="">
+            </div>
+        </div>
+    </div>
+    <script>document.getElementById("keşfetButonu").addEventListener("click", function(event) {
+        window.location.href = "şikayetler/tumSikayetler.html";
+      });
+    </script>
+        <script>document.getElementById("şikayetYazButonu").addEventListener("click", function(event) {
+            window.location.href = "ŞikayetYaz/şikayetYaz.html";
+          });
+        </script>
+    
+</body>
+</html>

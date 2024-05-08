@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <video src="logodeneme1.mp4" autoplay muted></video>
+    </div>
+    <ul>
+        <li><a href="../index.html">Anasayfa</a></li>
+        <li><a href="../PopülerSikayetler/index.html">Popüler Şikayetler</a></li>
+        <li><a href="../şikayetler/tumSikayetler.html">Şikayetler</a></li>
+        <li><a href="../ŞikayetYaz/şikayetYaz.html">Şikayet Yaz</a></li>
+    </ul>
+    <div class="action">
+        <div class="profile" onclick="menuToggle();">
+            <img src="profil-resmi-2.png" alt="">
+        </div>
+        <div class="menu">
+            <h3>Berkay Tuncer</h3>
+            <ul>
+                <li><img src="user.png">Profilim</li>
+                <li><img src="chat_FILL0_wght400_GRAD0_opsz48.png">Şikayetlerim</li>
+                <li> <img src="edit_FILL0_wght400_GRAD0_opsz48.png"> Şikayet Yaz</li>
+                <li> <img src="logout_FILL0_wght400_GRAD0_opsz48.png"> Çıkış Yap</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function menuToggle(){
+            const toggleMenu=document.querySelector('.menu');
+            toggleMenu.classList.toggle('active')
+        }
+    </script>
+    <script>
+      document.querySelector('.menu li:nth-child(1)').addEventListener("click", function(event) {
+      window.location.href = "../firma_profili/index.html";
+      });
+  </script>
+  <script>
+    document.querySelector('.menu li:nth-child(2)').addEventListener("click", function(event) {
+    window.location.href = "../şikayetListeleme/index.html";
+     });
+              </script>
+  <script>
+      document.querySelector('.menu li:nth-child(3)').addEventListener("click", function(event) {
+        window.location.href = "../ŞikayetYaz/şikayetYaz.html";
+      });
+    </script>
+    <script>
+  document.querySelector('.menu li:nth-child(3)').addEventListener("click", function(event) {
+  window.location.href = "../ŞikayetYaz/şikayetYaz.html";
+   });
+  </script>
+  <script>
+      document.querySelector('.menu li:last-child').addEventListener('click', function() {
+        window.location.href ="C:\\Users\\dilar\\OneDrive\\Masaüstü\\LoginTasarımı\\index2.html";
+      });
+    </script>
+
+
+</div>
+  <div class="container-list">
+    <div class="search-box">
+      <img src="search.png" alt="">
+      <input type="text">
+  </div>
+    <div class="container">
+      <div class="profile-picture">
+        <img src="profil-resmi-2.png" alt="Profil resmi 2">
+      </div> 
+      <div class="comment">
+        <h3>BASLIK</h3>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere est corrupti distinctio magni velit magnam. Fugit quae assumenda cum necessitatibus, commodi ut pariatur voluptatem veniam ab similique voluptatibus quidem reiciendis!</p>
+        <div class="username">
+        <p>Şu Kişiden Şikayet: </p> <p>@kullaniciAdi</p> </div>
+        <div class="date">20.02.2022</div>
+        <div class="wrapper">
+          <div class="comment">
+            <i onclick="comment()" id="co"  class="fa-regular fa-pen-to-square"></i>
+            <div class="reply-form">
+                <textarea class="txt-reply"></textarea>
+                <button class="btn-send">Gönder</button>
+              </div>        
+          </div>
+        
+        </div>
+
+        </div>
+      
+    </div>
+  </div>

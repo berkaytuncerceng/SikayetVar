@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <video src="logodeneme1.mp4" autoplay muted></video>
+          </div>
+        <!-- <img src="https://cdn.sikayetvar.com/public/images/logo.svg" decoding="auto" alt="Şikayetvar" width="181" height="30" class="logo"> -->
+        <ul>
+            <li><a href="../index.html">Anasayfa</a></li>
+            <li><a href="../PopülerSikayetler/index.html">Popüler Şikayetler</a></li>
+            <li><a href="../şikayetler/tumSikayetler.html">Şikayetler</a></li>
+            <li><a href="../ŞikayetYaz/şikayetYaz.html">Şikayet Yaz</a></li>
+        </ul>
+        <div class="action">
+            <div class="profile" onclick="menuToggle();">
+                <img src="profil-resmi-2.png" alt="">
+            </div>
+            <div class="menu">
+                <h3>Berkay Tuncer</h3>
+                <ul>
+                    <li><img src="user.png">Profilim</li>
+                    <li><img src="chat_FILL0_wght400_GRAD0_opsz48.png">Şikayetlerim</li>
+                    <li> <img src="edit_FILL0_wght400_GRAD0_opsz48.png"> Şikayet Yaz</li>
+                    <li> <img src="logout_FILL0_wght400_GRAD0_opsz48.png"> Çıkış Yap</li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            function menuToggle(){
+                const toggleMenu=document.querySelector('.menu');
+                toggleMenu.classList.toggle('active')
+            }
+        </script>
+            <script>
+                document.querySelector('.menu li:nth-child(1)').addEventListener("click", function(event) {
+                window.location.href = "../firma_profili/index.html";
+                });
+            </script>
+            <script>
+              document.querySelector('.menu li:nth-child(2)').addEventListener("click", function(event) {
+              window.location.href = "../şikayetListeleme/index.html";
+               });
+                        </script>
+            <script>
+                document.querySelector('.menu li:nth-child(3)').addEventListener("click", function(event) {
+                  window.location.href = "../ŞikayetYaz/şikayetYaz.html";
+                });
+              </script>
+              <script>
+            document.querySelector('.menu li:nth-child(3)').addEventListener("click", function(event) {
+            window.location.href = "../ŞikayetYaz/şikayetYaz.html";
+             });
+            </script>
+            <script>
+                document.querySelector('.menu li:last-child').addEventListener('click', function() {
+                  window.location.href ="C:\\Users\\dilar\\OneDrive\\Masaüstü\\LoginTasarımı\\index2.html";
+                });
+              </script>
+          
+    </div>
+    
+    <div class="container">
+        <div class="board">
+            <h2 class="text-light">Popüler Şikayetler</h2>
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="flex">
+                        <div class="comments">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Non, placeat quisquam? Animi sunt, dignissimos est sit reiciendis iste ipsa error?
+                        </div>
+                        <div class="profile">
+                            <img src="profil-resmi-2.png" alt="">
+                            <a href="#">Berkay Tuncer</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="flex">
+                        <div class="comments">
+                            Non, placeat quisquam? Animi sunt, dignissimos est sit reiciendis iste ipsa error?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                         </div>
+                        <div class="profile">
+                            <img src="profil-resmi-2.png" alt="">
+                            <a href="#">Semra Sıla Ertuğ</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="flex">
+                        <div class="comments">
+                            Animi sunt, ipsa error? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Non, placeat quisquam? dignissimos est sit reiciendis iste 
+                        </div>
+                        <div class="profile">
+                            <img src="profil-resmi-2.png" alt="">
+                            <a href="#">Ekinsu Oğuz</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+        
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

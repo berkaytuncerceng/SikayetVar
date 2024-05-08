@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="form-box">
+            <div class="button-box">
+                    <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Giriş Yap</button>
+                <button type="button" class="toggle-button" onclick="register()">Kaydol</button>
+            </div>
+            <div class="social-icons">
+                <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_3s913D.json"  background="transparent"  
+                speed="1"  loop  autoplay></lottie-player>
+                <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_OFBfKg.json"  background="transparent"
+                  speed="1"  loop  autoplay></lottie-player>
+                  <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_Joz0FE.json"  background="transparent" 
+                   speed="1"  loop  autoplay></lottie-player>
+                   <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_STNW9c.json"  background="transparent" 
+                    speed="1"    loop  autoplay></lottie-player>
+            </div>
+            <form id ='Login' class="input-group">
+                <input type="text" class="input-field" name="kullanici-adi" placeholder="Kullanıcı Adınızı giriniz." required>
+                <input type="password" class="input-field" name="kullanici-sifre" placeholder="Şifrenizi Giriniz." required>
+                <a href="#">Şifrenizi mi unuttunuz?</a>
+                <button type="submit" class="submit-btn" id="girisButonu">Giriş Yap</button>
+            </form>
+            <form id ='Register' class="input-group">
+                <input type="text" class="input-field" name="kullanici-adi1"placeholder="Kullanıcı Adınızı giriniz." required>
+                <input type="password" class="input-field" name="kullanici-sifre1" placeholder="Şifrenizi Giriniz." required>
+                <input type="email" class="input-field" name= "kullanici-email1" placeholder="E-Mail adresinizi Giriniz." required>
+                <label class="radio">
+                    <input type="radio" name="gender" value="Bireysel">Bireysel
+                    <input type="radio" name="gender" value="Kurumsal">Kurumsal
+                </label>
+                
+                <a href="#">Kaydolarak, Şartlar, Veri Politikası ve Çerez Politikasını kabul etmiş olursunuz.</a>
+                <button type="submit" class="submit-btn" id="kaydolButonu">Kaydol</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>
+        var x=document.getElementById("Login");
+        var z=document.getElementById("Register");
+        var y =document.getElementById("btn");
+        function register (){
+            x.style.left="-400px";
+            z.style.left="50px";
+            y.style.left="110px";
+        }
+        function login(){
+            x.style.left="50px";
+            z.style.left="450px";
+            y.style.left="0px";
+        }</script>
+   <script>
+var kullanicilar = [
+  {kullaniciAdi: "user1", sifre: "password1"},
+  {kullaniciAdi: "user2", sifre: "password2"},
+  {kullaniciAdi: "user3", sifre: "password3"}
+];
+
+document.getElementById("girisButonu").addEventListener("click", function(event) {
+  event.preventDefault(); 
+
+  var kullaniciAdi = document.forms["Login"]["kullanici-adi"].value;
+  var kullaniciSifre = document.forms["Login"]["kullanici-sifre"].value;
+
+  var kullaniciBulundu = false;
+  for (var i = 0; i < kullanicilar.length; i++) {
+    if (kullanicilar[i].kullaniciAdi === kullaniciAdi && kullanicilar[i].sifre === kullaniciSifre) {
+      kullaniciBulundu = true;
+      break;
+    }
+  }
+
+  if (kullaniciBulundu) {
+
+    window.location.href = "Anasayfa/index.html";
+  } else {
+
+    alert('Kullanıcı adı ve şifre eşleşmiyor. Lütfen tekrar deneyin.');
+  }
+});
+
+   </script>
+   <script>
+    document.getElementById("kaydolButonu").addEventListener("click", function(event) {
+  event.preventDefault(); 
+
+  var kullaniciAdi = document.forms["Register"]["kullanici-adi1"].value;
+  var kullaniciSifre = document.forms["Register"]["kullanici-sifre1"].value;
+  var kullaniciEmail = document.forms["Register"]["kullanici-email1"].value;
+
+  var kullaniciBulundu = false;
+  for (var i = 0; i < kullanicilar.length; i++) {
+    if (kullanicilar[i].kullaniciAdi === kullaniciAdi) {
+      kullaniciBulundu = true;
+      break;
+    }
+  }
+
+  if (kullaniciBulundu) {
+    alert('Bu kullanıcı adı zaten kullanılıyor. Lütfen farklı bir kullanıcı adı seçin.');
+  } else {
+    kullanicilar.push({kullaniciAdi: kullaniciAdi, sifre: kullaniciSifre, email: kullaniciEmail});
+    alert('Başarıyla kaydoldunuz!');
+  }
+});
+
+   </script>
+</body>
+</html>

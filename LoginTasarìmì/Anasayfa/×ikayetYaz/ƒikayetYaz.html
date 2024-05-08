@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="scripts.js"></script>
+  <title>Müşteri Şikayetleri</title>
+  
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <video src="logodeneme1.mp4" autoplay muted></video>
+      </div>
+      <!-- <img src="https://cdn.sikayetvar.com/public/images/logo.svg" decoding="auto" alt="Şikayetvar" width="181" height="30" class="logo"> -->
+      <ul>
+          <li><a href="../index.html">Anasayfa</a></li>
+          <li><a href="../PopülerSikayetler/index.html">Popüler Şikayetler</a></li>
+          <li><a href="../şikayetler/tumSikayetler.html">Tüm Şikayetler</a></li>
+          <li><a href="../ŞikayetYaz/şikayetYaz.html">Şikayet Yaz</a></li>
+      </ul>
+    
+      <div class="action">
+          <div class="profile" onclick="menuToggle();">
+              <img src="bunucikart.png" alt="">
+          </div>
+          <div class="menu">
+              <h3>Berkay Tuncer</h3>
+              <ul>
+                  <li><img src="user.png">Profilim</li>
+                  <li><img src="chat_FILL0_wght400_GRAD0_opsz48.png">Şikayetlerim</li>
+                  <li> <img src="edit_FILL0_wght400_GRAD0_opsz48.png"> Şikayet Yaz</li>
+                  <li> <img src="logout_FILL0_wght400_GRAD0_opsz48.png"> Çıkış Yap</li>
+              </ul>
+          </div>
+      </div>
+      <script>
+          function menuToggle(){
+              const toggleMenu=document.querySelector('.menu');
+              toggleMenu.classList.toggle('active')
+          }
+      </script>
+           <script>
+            document.querySelector('.menu li:nth-child(1)').addEventListener("click", function(event) {
+            window.location.href = "../firma_profili/index.html";
+            });
+        </script>
+        <script>
+          document.querySelector('.menu li:nth-child(2)').addEventListener("click", function(event) {
+          window.location.href = "../şikayetListeleme/index.html";
+           });
+                    </script>
+        <script>
+            document.querySelector('.menu li:nth-child(3)').addEventListener("click", function(event) {
+              window.location.href = "../ŞikayetYaz/şikayetYaz.html";
+            });
+          </script>
+          <script>
+        document.querySelector('.menu li:nth-child(3)').addEventListener("click", function(event) {
+        window.location.href = "../ŞikayetYaz/şikayetYaz.html";
+         });
+        </script>
+        <script>
+            document.querySelector('.menu li:last-child').addEventListener('click', function() {
+              window.location.href ="C:\\Users\\dilar\\OneDrive\\Masaüstü\\LoginTasarımı\\index2.html";
+            });
+          </script>
+      
+
+  </div>
+  </header>
+  <div class="container">
+    <img src="bunucikart.png" alt="Profil Resmi">
+    <h1>Müşteri Şikayetleri</h1> 
+    <p>Lütfen aşağıdaki formu doldurarak müşteri şikayetlerinizi bize iletin:</p>
+    <form action="" method="post" class="form">
+      <div class="sikayet_form">
+        <div>
+        Adınız:
+          <input id="name" type="text" name="name"/>
+      </div>
+      <div>
+        Email :
+          <input id="email" type="email" name="email" />
+    </div>
+    <div>
+      Firma:
+      <input id="firma" type="firma" name="firma"/>
+    </div>
+    <div>
+       Şikayetiniz :
+          <textarea class="message" id="message" name="message"></textarea>
+    </div>
+  
+    <div>      
+      <button id="gonder" name="gonder" class="gonder">Gönder</button>
+    </div>
+    </div>
+  </form>
+  
+  <!-- <div class="table">
+    <table id="complaint-table">
+      <tr>
+        <th>Tarih</th>
+        <th>Sahip</th>
+        <th>Açıklama</th>
+        <th>Durum</th>
+      </tr>
+      <tr id="complaint1">
+        <td>1.1.2020</td>
+        <td>Ahmet</td>
+        <td>Bina girişinde çöp kutularının boşaltılmaması nedeniyle çöp yığını oluştu.</td>
+        <td>Açık</td>
+        <td><button class="delete-button">Sil</button></td>
+        <td><button class="edit-button">Düzenle</button></td>
+      </tr>
+      <tr id="complaint2">
+        <td>5.3.2020</td>
+        <td>Mehmet</td>
+        <td>Asansörlerde sürekli arızalar nedeniyle güçlük çekiliyor.</td>
+        <td>Açık</td>
+        <td><button class="delete-button">Sil</button></td>
+        <td><button class="edit-button">Düzenle</button></td>
+      </tr>
+      <tr id="complaint3">
+        <td>12.5.2020</td>
+        <td>Emine</td>
+        <td>Binada sık sık elektrik kesintileri yaşanıyor.</td>
+        <td>Açık</td>
+        <td><button class="delete-button">Sil</button></td>
+        <td><button class="edit-button">Düzenle</button></td>
+      </tr>
+      <tr id="complaint4">
+        <td>5.3.2020</td>
+        <td>Mehmet</td>
+        <td>Asansörlerde sürekli arızalar nedeniyle güçlük çekiliyor.</td>
+        <td>Kapalı</td>
+        <td><button class="delete-button">Sil</button></td>
+        <td><button class="edit-button">Düzenle</button></td>
+      </tr>
+      <tr id="complaint5">
+        <td>5.3.2020</td>
+        <td>Mehmet</td>
+        <td>Asansörlerde sürekli arızalar nedeniyle güçlük çekiliyor.</td>
+        <td>Kapalı</td>
+        <td><button class="delete-button">Sil</button></td>
+        <td><button class="edit-button">Düzenle</button></td>
+      </tr>
+      <tr id="complaint6">
+        <td>5.3.2020</td>
+        <td>Mehmet</td>
+        <td>Asansörlerde sürekli arızalar nedeniyle güçlük çekiliyor.</td>
+        <td>Kapalı</td>
+        <td><button class="delete-button">Sil</button></td>
+        <td><button class="edit-button">Düzenle</button></td>
+      </tr>
+      <tr id="complaint7">
+        <td>5.3.2020</td>
+        <td>Mehmet</td>
+        <td>Asansörlerde sürekli arızalar nedeniyle güçlük çekiliyor.</td>
+        <td>Kapalı</td>
+        <td><button class="delete-button">Sil</button></td>
+        <td><button class="edit-button">Düzenle</button></td>
+      </tr>
+      <tr id="complaint8">
+        <td>5.3.2020</td>
+        <td>Mehmet</td>
+        <td>Asansörlerde sürekli arızalar nedeniyle güçlük çekiliyor.</td>
+        <td>Kapalı</td>
+        <td><button class="delete-button">Sil</button></td>
+        <td><button class="edit-button">Düzenle</button></td>
+      </tr>
+      <tr id="complaint9">
+        <td>5.3.2020</td>
+        <td>Mehmet</td>
+        <td>Asansörlerde sürekli arızalar nedeniyle güçlük çekiliyor.</td>
+        <td>Kapalı</td>
+        <td><button class="delete-button">Sil</button></td>
+        <td><button class="edit-button">Düzenle</button></td>
+      </tr>
+      <tr id="complaint10">
+        <td>5.3.2020</td>
+        <td>Mehmet</td>
+        <td>Asansörlerde sürekli arızalar nedeniyle güçlük çekiliyor.</td>
+        <td>Kapalı</td>
+        <td><button class="delete-button">Sil</button></td>
+        <td><button class="edit-button">Düzenle</button></td>
+      </tr>
+      </table>
+      </div> --> 
+
+
+</div>
+<div class="goruntule">
+  <ul id="sikayetler" class="sikayetclass"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
